@@ -1,4 +1,4 @@
-x={
+{
     "Comment": "A sample process step funcion",
     "StartAt": "ProcessTransaction",
     "States": {
