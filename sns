@@ -1,0 +1,24 @@
+######SNS service########
+SNS service is one of the messaging service in AWS which is used to send email/sms notifications
+to subscribers
+
+Subscribers are connected with a topic which we create in SNS service
+
+########Steps for SNS service#########
+1. Goto sns
+   create topic
+   copy the arn number generated against topic
+2. Goto subscriptions
+   create subscription
+      give arn obtained from topic
+      protocol - email(sends email notification)
+      endpoint - specify the email on which notifications to send
+   we can create number of subscriptions
+3. Notifications will be send to users
+   Users have to confirm subscription in order to receive notifications
+4. Topics - Publish -
+   Create message
+   Publish
+
+
+
