@@ -20,7 +20,7 @@ s3 = boto3.resource(
 
 for bucket in s3.buckets.all():
     print(bucket.name)
-filename = 'employees.csv'
+filename = '../resources/employees.csv'
 s3.Bucket('s3buckettrial1').download_file(Key='employees.csv', Filename=filename)
 df = spark.read.csv(filename,header=True, inferSchema=True)
 df.show()
@@ -28,4 +28,4 @@ df.show()
 new_df = df.drop_duplicates().orderBy('emp_id')
 new_df.show()
 new_df.toPandas().to_csv('new_emp.csv')
-s3.Bucket('s3buckettrial1').upload_file(Filename='new_emp.csv', Key='new_employee.csv')
+s3.Bucket('s3buckettrial1').upload_file(Filename='../new_emp.csv', Key='new_employee.csv')
