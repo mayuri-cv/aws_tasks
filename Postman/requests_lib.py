@@ -43,8 +43,8 @@ s3 = boto3.client('s3')
 s3 = boto3.resource(
     service_name='s3',
     region_name='us-east-2',
-    aws_access_key_id='AKIASY7ODLDQ5UXL5BID',
-    aws_secret_access_key='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'
+    aws_access_key_id='',
+    aws_secret_access_key=''
 )
 s3.Bucket('s3buckettrial1').upload_file(Filename='../Postman/data_file', Key='data_file')
 ##POST request
